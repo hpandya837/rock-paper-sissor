@@ -1,0 +1,81 @@
+.full {
+    text-align: center;
+    background-repeat: no-repeat;
+ }
+
+  .bord {
+   box-shadow: 0vw 0vw 4vw 0vw rgb(0, 16, 94); 
+   width: 50%;
+   margin: 2vw;
+   text-align: center;
+   background-color: blue;
+   color: white;
+   font-weight: 500;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+ }
+
+  .res {
+   border: 3px solid black;
+   padding: 2vw;
+   margin-left: 25vw;
+   margin-right: 15vw;
+   border-radius: 1vw;
+   text-align: center;
+   width: 50%;
+   background-color: white;
+   margin-top: 5vw;
+   text-align: center;
+  }
+
+  .rob {
+    width: 75%;
+    margin-left: 10vw;
+  }
+
+  .topright {
+    position: absolute;
+    width: 40%;
+    top: 20px;
+    left: 5px;
+    text-align: center;
+  }
+  .topright1 {
+    position: absolute;
+    width: 40%;
+    top: 60px;
+    left: 5px;
+    text-align: center;
+  }
+  .topright2 {
+    position: absolute;
+    width: 40%;
+    top: 100px;
+    left: 5px;
+    text-align: center;
+  }
+  .topleft {
+    position: absolute;
+    width: 40%;
+    top: 20px;
+    right: 5px;
+    text-align: center;
+  }
+  .topleft1 {
+    position: absolute;
+    width: 40%;
+    top: 60px;
+    right: 5px;
+    text-align: center;
+  }
+  .topleft2 {
+    position: absolute;
+    width: 40%;
+    top: 100px;
+    left: 5px;
+    text-align: center;
+  }
+  .main {
+    text-align: center;
+    margin-top: 25vw;
+  }
