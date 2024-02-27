@@ -1,6 +1,8 @@
 let disName;
 let disComName;
 let computerValue = 0;
+let userchoice = document.getElementById(difSelector).value;
+
 
 function display() {
   disComName = document.getElementById("comName").value;
@@ -34,11 +36,17 @@ function responseNew() {
     return "Rock";
   } else {
     return "No Answer";
-  }
+  // }
 }
 
-function test() {
-    console.log("idiot")
+function gameChoice() {
+
+if (userchoice === "diffThree") {
+responseNew()
+
+}
+
+
 }
 
 
