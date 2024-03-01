@@ -1,10 +1,16 @@
 let disName;
 let disComName;
 let computerValue = 0;
-let userchoice = document.getElementById(difSelector).value;
-
+let userchoice
+let humanRes;
+let responseArray = [
+  "Rock",
+  "Paper",
+  "Scissor", 
+];
 
 function display() {
+  userchoice = document.getElementById("difSelector").value;
   disComName = document.getElementById("comName").value;
   document.getElementById("displayComputerName").textContent = "CPU Name";
   document.getElementById("displayComputerName1").textContent = disComName;
@@ -20,11 +26,11 @@ function display() {
 
 function responseNew() {
   let humanRes = document.getElementById("humanRes").value;
-  // Incrementing computer value (not sure what it is supposed to do)
+  // Incrementing computer value (by a value of one cuz the computer always wins)
   computerValue++;
-  // Displaying computer value (assuming it's supposed to be displayed somewhere)
+  // Displaying computer value 
   document.getElementById("displayComputerName1").textContent = computerValue;
-  console.log("hello")
+  
   if (humanRes === "Rock") {
     document.getElementById("resOne").textContent = "Paper"
     return "Paper";
@@ -36,14 +42,30 @@ function responseNew() {
     return "Rock";
   } else {
     return "No Answer";
-  // }
+  }
 }
 
-function gameChoice() {
 
-if (userchoice === "diffThree") {
-responseNew()
+function normal() {
+  humanRes = document.getElementById("humanRes").value;
+  let randomNumber = Math.floor(Math.random()*responseArray.length);
+document.getElementById('resOne').textContent = responseArray[randomNumber];
 
+if (userChoice === computerChoiceArray[randomNumber]) {
+  document.getElementById("winnerChoice").innerText = "tie";
+  
+}
+// Check if the user wins
+else if (
+  (userChoice === 'rock' && computerChoiceArray[randomNumber] === 'scissors') ||
+  (userChoice === 'paper' && computerChoiceArray[randomNumber] === 'rock') ||
+  (userChoice === 'scissors' && computerChoiceArray[randomNumber] === 'paper')
+) {
+  document.getElementById("winnerChoice").innerText = "win";
+}
+// If it's not a tie and the user didn't win, it's a lose
+else {
+  document.getElementById("winnerChoice").innerText = "lose";
 }
 
 

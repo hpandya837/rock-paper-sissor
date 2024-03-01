@@ -70,7 +70,7 @@
 
     <br><br><br><br>
     <div class="mid">
-    <button class="btn bord" onclick="gamechoice()">Choose</button>
+    <button class="btn bord" onclick="display()">Choose</button>
     </div>
 </div>
       
@@ -83,14 +83,20 @@
     <div class="topright"><h1 id="displayComputerName"></h1></div>
     <div class="topright1"><h1 id="displayComputerName1"></h1></div>
 
-    <div class="container-fluid main">
+
+
+    <div class="container-fluid main " >
       <label for="humanRes" class="form-label">Rock, Paper, Or Scissors!</label>
         <input type="text " class="form-control rob" id="humanRes" placeholder="Choose Rock, Paper, or Scissors" />
         
-        <button onclick="responseNew()" id="lockInButton" class="btn bord">Lock In Your Answer!</button>
+        <button onclick="normal()" id="lockInButton" class="btn bord">Lock In Your Answer!</button>
       </div>
 
     <div class="res">
+      <p id="resOne"></p>
+
+    </div>
+    <div class="res1">
       <p id="resOne"></p>
 
     </div>
