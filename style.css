@@ -1,29 +1,32 @@
 body {
   text-align: center;
-  background-color: rgb(182, 205, 216)
+  background-color: #192A56
 }
 header {
   margin: 2em;
+  color: #F8F9FA;
 }
 .header {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+  font-family: "shinryu", sans-serif;
+font-weight: 400;
+font-style: normal;
+  color: #F8F9FA;
 }
 .option button{
   font-size: 1.5rem;
-  min-width: 90px;
+  min-width: 100px;
   margin: 1em;
   border-radius: 250px;
-  background-color: rgba(108, 125, 187, 0.548);
+  background-color: #6C757D;
+  border: 2px solid #343A40;
   cursor: pointer;
 }
 
 .player {
-  background-color: rgb(60, 108, 180);
+  background-color: #343A40;
 }
 .comp {
-  background-color: rgb(187, 36, 36);
+  background-color:  #BD373E;
 }
 .img {
   height: 4em;
@@ -39,13 +42,13 @@ header {
   margin-left: 0;
 
 }
-.title {
+.ui {
   margin-top: 0;
   margin-bottom: 2em;
-  font-family: "Anta", sans-serif;
-  color: white;
-  font-weight: 300;
-  font-size: 2rem;
+  font-family: "shinryu", sans-serif;
+font-weight: 400;
+font-style: normal;
+color: white;
 }
 #box {
   padding: 2em;
@@ -54,26 +57,27 @@ header {
   margin: 2em;
 }
 h1  { 
-      font-family: "Anta", sans-serif;
-      font-weight: 400;
-      font-style: normal;
+  font-family: "shinryu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
     
 }
 h2  {
   margin-bottom: 0;
-  font-family: "Lato", sans-serif;
-  font-weight: 550;
+  font-family: "shinryu", sans-serif;
+font-weight: 400;
+font-style: normal;
+color: white;
 }
 h4 {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+  font-family: "shinryu", sans-serif;
+font-weight: 400;
+font-style: normal;
 }
 h3 {
-  font-family: "Anta", sans-serif;
-  color: white;
-  font-weight: 300;
-  font-size: 2rem;
+  font-family: "shinryu", sans-serif;
+font-weight: 400;
+font-style: normal;
 }
 .parent {
   margin-top: 0rem;

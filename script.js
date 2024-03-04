@@ -1,49 +1,107 @@
-let disName;
-let disComName;
-let computerValue = 0;
-let userValue = 0;
-let difficulty;
+// enter username prompt
+window.onload = (event) => {
+  let userName = prompt("Enter your name");
 
-// Added response array for easy maintenance of choices
-const responseArray = ["Rock", "Paper", "Scissors"];
+  if (userName === null) {
+    userName = prompt('Please enter your name:')
+  }
 
-function display() {
-    difficulty = document.getElementById("difSelector").value; // Store selected difficulty
-    disComName = document.getElementById("comName").value; // Get CPU name
-    document.getElementById("displayComputerName").textContent = "CPU Name"; // Set initial CPU name display
-    document.getElementById("displayComputerName1").textContent = disComName; // Set actual CPU name display
+  if (!userName.trim()) {
+    alert("Please enter a name!");
+    userName = prompt("Enter your name");
+  }
+  document.getElementById("response-text").innerText = `${userName}`;
+};
 
-    disName = document.getElementById("plaName").value; // Get player name
-    document.getElementById("displayPlayerName").textContent = "Player Name"; // Set initial player name display
-    document.getElementById("displayPlayerName1").textContent = disName; // Set actual player name display
+let playerScore = 0;
+let computerScore = 0;
+let rounds = 0;
+let totalRounds = 5; // Shows the total number of rounds
 
-    document.getElementById("fullOne").classList.add("d-none"); // Hide intro section
-    document.getElementById("gameDiv").classList.remove("hide"); // Show game section
+// variables
+const playerScoreElement = document.getElementById('playerScore');
+const computerScoreElement = document.getElementById('ComputerScore');
+const winnerElement = document.getElementById('winner');
+let roundsElement = document.getElementById('rounds');
+
+//function to play game
+function gameStart(playerChoice) {
+  const options = ["rock", "paper", "scissors"];
+  const computerChoice = options[Math.floor(Math.random() * 3)];
+  if (playerChoice === "rock") {
+    document.getElementById("chosenimg").src = "rockicon.png";
+  }
+  if (playerChoice === "paper") {
+    document.getElementById("chosenimg").src = "scrollfinal.png";
+  }
+  if (playerChoice === "scissors") {
+    document.getElementById("chosenimg").src = "shurikan.png";
+  }
+
+  if (computerChoice === "rock") {
+    document.getElementById("computerimg").src = "rockicon.png";
+  }
+  if (computerChoice === "paper") {
+    document.getElementById("computerimg").src = "scrollfinal.png";
+  }
+  if (computerChoice === "scissors") {
+    document.getElementById("computerimg").src = "shurikan.png";
+  }
+  if (playerChoice === computerChoice) {
+    winnerElement.textContent = "It's a tie!";
+} else if (
+    (playerChoice === 'rock' && computerChoice === 'scissors') ||
+    (playerChoice === 'paper' && computerChoice === 'rock') ||
+    (playerChoice === 'scissors' && computerChoice === 'paper')
+   
+) {
+    winnerElement.textContent = 'You win!';
+    playerScore++; 
+
+} else {
+    winnerElement.textContent = 'You lose!';
+    computerScore++;
+
+}
+playerScoreElement.textContent = playerScore;
+computerScoreElement.textContent = computerScore;
+
+// Adds the rounds
+rounds++;
+
+// Display rounds played
+roundsElement.textContent = `Round ${rounds}`;
+
+// Check if all rounds played
+if (rounds === totalRounds) {
+    endGame();
 }
 
-function normal() {
-  let humanRes = document.getElementById("humanRes").value.toLowerCase();
-  let randomNumber = Math.floor(Math.random() * responseArray.length);
-  document.getElementById("resOne").textContent = responseArray[randomNumber];
+}
 
-  // Corrected evaluation logic
-  if (humanRes === responseArray[randomNumber]) {
-    document.getElementById("winnerChoice").innerText = "tie";
-  } else if (
-    (humanRes === "rock" && responseArray[randomNumber] === "scissors") ||
-    (humanRes === "paper" && responseArray[randomNumber] === "rock") ||
-    (humanRes === "scissors" && responseArray[randomNumber] === "paper")
-  ) {
-    document.getElementById("winnerChoice").innerText = "win";
-    userValue++; // Increment user score only if they win
+// ends the game after 5 rounds
+function endGame() {
+
+  document.getElementById('choices').style.display = 'none';
+
+  roundsElement.textContent = `Total Rounds Played: ${rounds}`;
+
+  // Announces the overall winner or loser
+  let endMessage = '';
+  if (playerScore > computerScore) {
+      endMessage = "WINNER WINNER CHICKEN DINNER!"; 
+  } else if (playerScore < computerScore) {
+      endMessage = 'Just shy of victory, keep dreaming!';
   } else {
-    document.getElementById("winnerChoice").innerText = "lose";
-    computerValue++; // Increment computer score only if they win
+      endMessage = "Deadlocked, share the glory!";
   }
 
-  // Update scores only if there's a winner (not on a tie)
-  if (document.getElementById("winnerChoice").innerText !== "tie") {
-    document.getElementById("displayPlayerName1").textContent = disName + " (" + userValue + ")";
-    document.getElementById("displayComputerName1").textContent = disComName + " (" + computerValue + ")";
-  }
+  // Display the final message
+  winnerElement.textContent = endMessage;
 }
+
+// Reload the page
+document.getElementById("reset").addEventListener("click", function() {
+
+  location.reload();
+})

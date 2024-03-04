@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Rock Paper Scissors</title>
+    <title>Rock Scroll Shurikan </title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -13,13 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <!--Font links-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Poppins:wght@400;500&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anta&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@400;500&display=swap"
-        rel="stylesheet">
+   
 
 </head>
 
@@ -27,19 +21,19 @@
     <div class="container">
         <header>
             <!-- place header here -->
-            <h1><b>Rock  Paper  Scissors </b></h1>
+            <h1><b>Rock Scroll Shurikan  </b></h1>
         </header>
         <main>
 <!--Shows player score vs computer score-->
             <h2>Score:</h2>
-            <div class='parent'>
-                <div class='child' id="playerScore">
+            <div class='parent1'>
+                <div class='child1' id="playerScore">
                     <h2>0</h2>
                 </div>
-                <div class="child">
+                <div class="child1">
                     <h2>-</h2>
                 </div>
-                <div class='child' id="ComputerScore">
+                <div class='child1' id="ComputerScore">
                     <h2>0</h2>
                 </div>
             </div>
@@ -52,33 +46,33 @@
 <!--Displays player and comp. choices-->
             <div class="row justify-content-center my-3">
                 <div class="player col-lg-5 col-10" id="box">
-                    <div class="title" id="response-text">
+                    <div class="ui" id="response-text">
                         <h3>You</h3>
                     </div>
-                    <img class="img1" src="" id="chosenimage">
+                    <img class="img1" src="" id="chosenimg">
                 </div>
                 <div class="comp col-lg-5 col-10" id="box">
-                    <div class="title">
+                    <div class="ui">
                         <h3>Computer</h3>
                     </div>
-                    <img class="img1" src="" id="computerimage">
+                    <img class="img1" src="" id="computerimg">
                 </div>
             </div>
 <!--Buttons for the options-->
             <div class="option" id="choices">
-                <button id="rock" onclick="gameStart('rock')"><img class="img" src="images/Rock-Flat-icon.png"></button>
+                <button id="rock" onclick="gameStart('rock')"><img class="img" src="rockicon.png"></button>
                 <button id="paper" onclick="gameStart('paper')"><img class="img"
-                        src="images/Page-With-Curl-Emoji.png"></button>
+                        src="scrollfinal.png"></button>
                 <button id="scissors" onclick="gameStart('scissors')"><img class="img"
-                        src="images/scissors1.png"></button>
+                        src="shurikan.png"></button>
             </div>
             <h4 id="endMessage" class="text-center header"></h4>
-            <div class='parent'>
-                <div class="child">
+            <div class='parent1'>
+                <div class="child1">
                     <h2>Restart Game:</h2>
                 </div>
-                <div class='child'><button class="reset" id="reset" onclick="reset()"><img class="reload"
-                            src="images/reload.png"></button></div>
+                <div class='child1'><button class="reset" id="reset" onclick="reset()"><img class="reload"
+                            src="reset.png"></button></div>
             </div>
         </main>
 
@@ -91,6 +85,17 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"></script>
         <script src="script.js"></script>
+
+        <script>
+          (function(d) {
+            var config = {
+              kitId: 'nmn7zom',
+              scriptTimeout: 3000,
+              async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+          })(document);
+        </script>
     </div>
     <!-- place footer here -->
     
