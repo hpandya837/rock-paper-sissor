@@ -1,92 +1,111 @@
-.full {
-    text-align: center;
-    background-repeat: no-repeat;
- }
+body {
+  text-align: center;
+  background-color: rgb(182, 205, 216)
+}
+header {
+  margin: 2em;
+}
+.header {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.option button{
+  font-size: 1.5rem;
+  min-width: 90px;
+  margin: 1em;
+  border-radius: 250px;
+  background-color: rgba(108, 125, 187, 0.548);
+  cursor: pointer;
+}
 
-  .bord {
-   box-shadow: 0vw 0vw 4vw 0vw rgb(0, 16, 94); 
-   width: 50%;
-   margin: 2vw;
-   text-align: center;
-   background-color: blue;
-   color: white;
-   font-weight: 500;
-   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.player {
+  background-color: rgb(60, 108, 180);
+}
+.comp {
+  background-color: rgb(187, 36, 36);
+}
+.img {
+  height: 4em;
+  padding: 0.5em;
+}
+.img1 {
+  height: 8em;
+  width: 8em;
+}
+.reload {
+  height: 4em;
+  display:inline-block;
+  margin-left: 0;
 
- }
+}
+.title {
+  margin-top: 0;
+  margin-bottom: 2em;
+  font-family: "Anta", sans-serif;
+  color: white;
+  font-weight: 300;
+  font-size: 2rem;
+}
+#box {
+  padding: 2em;
+  padding-bottom: 2.5em;
+  border-radius: 10px;
+  margin: 2em;
+}
+h1  { 
+      font-family: "Anta", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    
+}
+h2  {
+  margin-bottom: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 550;
+}
+h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+h3 {
+  font-family: "Anta", sans-serif;
+  color: white;
+  font-weight: 300;
+  font-size: 2rem;
+}
+.parent {
+  margin-top: 0rem;
+  text-align: center;
+}
+.child {
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  vertical-align: middle;
+}
 
-  .res {
-   border: 3px solid black;
-   padding: 2vw;
-   margin-left: 25vw;
-   margin-right: 15vw;
-   border-radius: 1vw;
-   text-align: center;
-   width: 50%;
-   background-color: white;
-   margin-top: 5vw;
-   text-align: center;
-  }
-  .res {
-    border: 3px solid black;
-    padding: 2vw;
-    margin-left: 25vw;
-    margin-right: 15vw;
-    border-radius: 1vw;
-    text-align: center;
-    width: 50%;
-    background-color: white;
-    margin-top: 10vw;
-    text-align: center;
-   }
-  .rob {
-    width: 75%;
-    margin-left: 10vw;
-  }
+#playerScore {
+  font-size: 2em;
+  font-weight: 700;
+}
 
-  .topright {
-    position: absolute;
-    width: 40%;
-    top: 20px;
-    left: 5px;
-    text-align: center;
-  }
-  .topright1 {
-    position: absolute;
-    width: 40%;
-    top: 60px;
-    left: 5px;
-    text-align: center;
-  }
-  .topright2 {
-    position: absolute;
-    width: 40%;
-    top: 100px;
-    left: 5px;
-    text-align: center;
-  }
-  .topleft {
-    position: absolute;
-    width: 40%;
-    top: 20px;
-    right: 5px;
-    text-align: center;
-  }
-  .topleft1 {
-    position: absolute;
-    width: 40%;
-    top: 60px;
-    right: 5px;
-    text-align: center;
-  }
-  .topleft2 {
-    position: absolute;
-    width: 40%;
-    top: 100px;
-    left: 5px;
-    text-align: center;
-  }
-  .main {
-    text-align: center;
-    margin-top: 25vw;
-  }
+#ComputerScore {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+button {
+  border: none;
+  border-radius: 100%;
+  box-shadow: 0 4px 5px #050505a4;
+  transition:0.25s;
+}
+button:hover {
+  box-shadow: 0 10px 10px #050505a4;
+  transition:0.25s;
+}
+button:active {
+  box-shadow:none;
+  transition:0.25s;
+}

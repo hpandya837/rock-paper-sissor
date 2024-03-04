@@ -1,107 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
+
+<head>
+    <title>Rock Paper Scissors</title>
+    <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rock-Paper-Scissors Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!--Font links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&family=Metal+Mania&family=Nunito&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&family=Metal+Mania&family=Nunito&family=Rubik+Doodle+Triangles&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+        href="https://fonts.googleapis.com/css2?family=Anta&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
 
-      <!-- Intro Div -->
-    <div class="container-fluid mt-5 full" id="fullOne">
-    <div class="top">
-    <div class="row">
-        <h1>Rock Paper Scissors!</h1>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!-- place header here -->
+            <h1><b>Rock  Paper  Scissors </b></h1>
+        </header>
+        <main>
+<!--Shows player score vs computer score-->
+            <h2>Score:</h2>
+            <div class='parent'>
+                <div class='child' id="playerScore">
+                    <h2>0</h2>
+                </div>
+                <div class="child">
+                    <h2>-</h2>
+                </div>
+                <div class='child' id="ComputerScore">
+                    <h2>0</h2>
+                </div>
+            </div>
+            <h2 id="rounds" class="text-center my-2"></h2>
+            <div class="row justify-content-center my-3">
+                <div class="col-md-8">
+                    <h2 id="winner" class="text-center my-2"></h2>
+                </div>
+            </div>
+<!--Displays player and comp. choices-->
+            <div class="row justify-content-center my-3">
+                <div class="player col-lg-5 col-10" id="box">
+                    <div class="title" id="response-text">
+                        <h3>You</h3>
+                    </div>
+                    <img class="img1" src="" id="chosenimage">
+                </div>
+                <div class="comp col-lg-5 col-10" id="box">
+                    <div class="title">
+                        <h3>Computer</h3>
+                    </div>
+                    <img class="img1" src="" id="computerimage">
+                </div>
+            </div>
+<!--Buttons for the options-->
+            <div class="option" id="choices">
+                <button id="rock" onclick="gameStart('rock')"><img class="img" src="images/Rock-Flat-icon.png"></button>
+                <button id="paper" onclick="gameStart('paper')"><img class="img"
+                        src="images/Page-With-Curl-Emoji.png"></button>
+                <button id="scissors" onclick="gameStart('scissors')"><img class="img"
+                        src="images/scissors1.png"></button>
+            </div>
+            <h4 id="endMessage" class="text-center header"></h4>
+            <div class='parent'>
+                <div class="child">
+                    <h2>Restart Game:</h2>
+                </div>
+                <div class='child'><button class="reset" id="reset" onclick="reset()"><img class="reload"
+                            src="images/reload.png"></button></div>
+            </div>
+        </main>
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </div>
-    <div class="row">
-    <div class="col-6-sm col-6-lg">
-        <label for="difSelector" class="form-label">Difficulty Selector:</label>
-        <select class="form-select rob" id="difSelector">
-        <option place></option>
-        <option value="difTwo">Normal</option>
-        <option value="difThree">Hard</option>
-    </select>
-    </div>
-    <br><br><br><br>
-    <div class="col-6-sm col-6-lg">
-      <label for="comName" class="form-label">CPU Name:</label>
-        <input type="text " class="form-control rob" id="comName" placeholder="Enter Name for the CPU" />
-    </div>
-  </div>
-  <br>
-  <div class="col-6-sm col-6-lg">
-    <label for="plaName" class="form-label">Player Name:</label>
-      <input type="text " class="form-control rob" id="plaName" placeholder="Enter Your Display Name" />
-  </div>
-</div>
-
-    <br><br><br><br>
-    <div class="mid">
-    <button class="btn bord" onclick="display()">Choose</button>
-    </div>
-</div>
-      
-
-
-    <!-- Game Div -->
-    <div class="topleft"><h1 id="displayPlayerName"></h1></div>
-    <div class="topleft1"><h1 id="displayPlayerName1"></h1></div>
-
-    <div class="topright"><h1 id="displayComputerName"></h1></div>
-    <div class="topright1"><h1 id="displayComputerName1"></h1></div>
-
-
-
-    <div class="container-fluid main " >
-      <label for="humanRes" class="form-label">Rock, Paper, Or Scissors!</label>
-        <input type="text " class="form-control rob" id="humanRes" placeholder="Choose Rock, Paper, or Scissors" />
-        
-        <button onclick="normal()" id="lockInButton" class="btn bord">Lock In Your Answer!</button>
-      </div>
-
-    <div class="res">
-      <p id="resOne"></p>
-
-    </div>
-    <div class="res1">
-      <p id="resOne"></p>
-
-    </div>
+    <!-- place footer here -->
     
-    
-    
-    
-      </div>
+</body>
+
+</html>
